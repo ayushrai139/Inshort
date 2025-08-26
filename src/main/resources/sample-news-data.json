@@ -1,0 +1,92 @@
+[
+  {
+    "id": "b1793e11-85f1-47f4-b836-ddc21dd8991e",
+    "title": "Paris police chase over running of red light ends in pileup | DW News",
+    "description": "Paris police chase over running of red light ends in pileup. A car chase in Paris has ended in a crash. Police were pursuing a driver who'd run a red light but lost control of their vehicle, colliding with two others. The officers are now in hospital with serious injuries.",
+    "url": "https://www.youtube.com/@dwnews",
+    "publication_date": "2025-03-24T11:08:11",
+    "source_name": "DW",
+    "category": [
+      "General"
+    ],
+    "relevance_score": 0.51,
+    "latitude": 48.8566,
+    "longitude": 2.3522
+  },
+  {
+    "id": "c5e982b3-91e2-4f2a-8d6c-8765fd3a7a12",
+    "title": "Elon Musk finalizes Twitter acquisition after months of negotiations",
+    "description": "Billionaire entrepreneur Elon Musk has finally completed his acquisition of Twitter, ending a months-long saga that saw multiple legal battles and fluctuating share prices. The deal was finalized at the original offering price of $54.20 per share.",
+    "url": "https://www.techcrunch.com/twitter-acquisition",
+    "publication_date": "2025-04-01T09:30:45",
+    "source_name": "TechCrunch",
+    "category": [
+      "Technology",
+      "Business"
+    ],
+    "relevance_score": 0.85,
+    "latitude": 37.4484,
+    "longitude": -122.1604
+  },
+  {
+    "id": "a2b71c45-d39f-4e87-9b23-3f56e891dc7a",
+    "title": "New York Times reports record digital subscription growth",
+    "description": "The New York Times Company announced today that it has surpassed 10 million digital subscribers, a significant milestone for the newspaper as it continues its digital transformation. The company attributes this growth to its expanded coverage in areas like technology, climate, and global politics.",
+    "url": "https://www.nytimes.com/company/announcements",
+    "publication_date": "2025-03-15T14:22:36",
+    "source_name": "New York Times",
+    "category": [
+      "Business",
+      "Media"
+    ],
+    "relevance_score": 0.72,
+    "latitude": 40.7128,
+    "longitude": -74.0060
+  },
+  {
+    "id": "f7d92e68-4b57-48c1-a91f-1e8cb7a5d7b3",
+    "title": "Latest iPhone unveiling draws record viewership",
+    "description": "Apple's latest iPhone unveiling event has broken all previous viewership records, with over 100 million people tuning in to the livestream. The new device features breakthrough AI capabilities and a revolutionary camera system that experts say could redefine mobile photography.",
+    "url": "https://www.apple.com/iphone",
+    "publication_date": "2025-03-28T10:15:30",
+    "source_name": "Apple Insider",
+    "category": [
+      "Technology",
+      "Consumer Electronics"
+    ],
+    "relevance_score": 0.91,
+    "latitude": 37.3348,
+    "longitude": -122.0090
+  },
+  {
+    "id": "e3a59d24-7c18-4956-b97d-18f2b8c54a6e",
+    "title": "Major breakthrough in quantum computing announced by IBM",
+    "description": "IBM researchers have announced a significant breakthrough in quantum computing, developing a new qubit architecture that dramatically reduces error rates. This advance could accelerate the timeline for practical quantum computing applications in fields like cryptography, materials science, and drug discovery.",
+    "url": "https://www.ibm.com/quantum-computing",
+    "publication_date": "2025-03-20T08:45:12",
+    "source_name": "IEEE Spectrum",
+    "category": [
+      "Technology",
+      "Science"
+    ],
+    "relevance_score": 0.88,
+    "latitude": 41.1093,
+    "longitude": -73.7199
+  },
+  {
+    "id": "d4c86f71-3b2e-4a9c-8d5f-2e7a1f9b3d4e",
+    "title": "Champions League final set after dramatic semi-finals",
+    "description": "The UEFA Champions League final matchup is now set following two dramatic semi-final second legs. Both matches went to extra time, with last-minute goals determining the finalists. Football experts are already calling it one of the most exciting Champions League tournaments in recent memory.",
+    "url": "https://www.uefa.com/championsleague",
+    "publication_date": "2025-04-02T22:10:05",
+    "source_name": "UEFA",
+    "category": [
+      "Sports",
+      "Football"
+    ],
+    "relevance_score": 0.79,
+    "latitude": 48.8566,
+    "longitude": 2.3522
+  }
+]
+
