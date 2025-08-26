@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "f7c8d3e6-6a7b-4f5a-b9c2-1de5a0f72b54",
+		"name": "News Data Retrieval System",
+		"description": "A collection for testing the Contextual News Data Retrieval System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "News Endpoints",
+			"item": [
+				{
+					"name": "Query News (LLM Analysis)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/query?query=Latest developments in the Elon Musk Twitter acquisition&lat=37.4220&lon=-122.0840&radius=10.0&limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"query"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Latest developments in the Elon Musk Twitter acquisition",
+									"description": "The user's news query"
+								},
+								{
+									"key": "lat",
+									"value": "37.4220",
+									"description": "User's latitude (optional)"
+								},
+								{
+									"key": "lon",
+									"value": "-122.0840",
+									"description": "User's longitude (optional)"
+								},
+								{
+									"key": "radius",
+									"value": "10.0",
+									"description": "Search radius in kilometers (default: 10.0)"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Process a user query with LLM analysis to determine the best search strategy"
+					},
+					"response": []
+				},
+				{
+					"name": "Search by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/category/Technology?limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"category",
+								"Technology"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Retrieve news articles by category"
+					},
+					"response": []
+				},
+				{
+					"name": "Search by Source",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/source/New York Times?limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"source",
+								"New York Times"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Retrieve news articles from a specific source"
+					},
+					"response": []
+				},
+				{
+					"name": "Search by Relevance Score",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/score?threshold=0.7&limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"score"
+							],
+							"query": [
+								{
+									"key": "threshold",
+									"value": "0.7",
+									"description": "Minimum relevance score (default: 0.7)"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Retrieve news articles with a relevance score above a threshold"
+					},
+					"response": []
+				},
+				{
+					"name": "Text Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/search?query=Elon Musk Twitter&limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Elon Musk Twitter",
+									"description": "Search query for article title and description"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Search for news articles by text in title and description"
+					},
+					"response": []
+				},
+				{
+					"name": "Nearby Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/nearby?lat=37.7749&lon=-122.4194&radius=10.0&limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"nearby"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "37.7749",
+									"description": "User's latitude"
+								},
+								{
+									"key": "lon",
+									"value": "-122.4194",
+									"description": "User's longitude"
+								},
+								{
+									"key": "radius",
+									"value": "10.0",
+									"description": "Search radius in kilometers (default: 10.0)"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Retrieve news articles near a geographic location"
+					},
+					"response": []
+				},
+				{
+					"name": "Trending Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/trending?lat=37.7749&lon=-122.4194&radius=10.0&limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"trending"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "37.7749",
+									"description": "User's latitude"
+								},
+								{
+									"key": "lon",
+									"value": "-122.4194",
+									"description": "User's longitude"
+								},
+								{
+									"key": "radius",
+									"value": "10.0",
+									"description": "Search radius in kilometers (default: 10.0)"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Maximum number of results to return (default: 5)"
+								}
+							]
+						},
+						"description": "Retrieve trending news articles near a geographic location"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for retrieving news articles using various search strategies"
+		},
+		{
+			"name": "User Events",
+			"item": [
+				{
+					"name": "Record User Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"user123\",\n    \"articleId\": \"b1793e11-85f1-47f4-b836-ddc21dd8991e\",\n    \"eventType\": \"VIEW\",\n    \"latitude\": 37.7749,\n    \"longitude\": -122.4194\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"events"
+							]
+						},
+						"description": "Record a user interaction with a news article"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Events by Article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/events/article/b1793e11-85f1-47f4-b836-ddc21dd8991e",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"events",
+								"article",
+								"b1793e11-85f1-47f4-b836-ddc21dd8991e"
+							]
+						},
+						"description": "Retrieve user events for a specific article"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Events by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/events/user/user123",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"events",
+								"user",
+								"user123"
+							]
+						},
+						"description": "Retrieve user events for a specific user"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recent Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/events/recent?hours=24",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"events",
+								"recent"
+							],
+							"query": [
+								{
+									"key": "hours",
+									"value": "24",
+									"description": "Number of hours to look back (default: 24)"
+								}
+							]
+						},
+						"description": "Retrieve recent user events within a time window"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for managing user interactions with news articles"
+		},
+		{
+			"name": "Sample Scenarios",
+			"item": [
+				{
+					"name": "Example 1: Technology News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/query?query=Latest technology news from Apple and IBM",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"query"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Latest technology news from Apple and IBM"
+								}
+							]
+						},
+						"description": "Example of a category + source based query"
+					},
+					"response": []
+				},
+				{
+					"name": "Example 2: News Near Palo Alto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/query?query=Latest developments in the Elon Musk Twitter acquisition near Palo Alto&lat=37.4419&lon=-122.1430",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"query"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Latest developments in the Elon Musk Twitter acquisition near Palo Alto"
+								},
+								{
+									"key": "lat",
+									"value": "37.4419"
+								},
+								{
+									"key": "lon",
+									"value": "-122.1430"
+								}
+							]
+						},
+						"description": "Example of a location-based query with specific entities"
+					},
+					"response": []
+				},
+				{
+					"name": "Example 3: High Quality Sports News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/news/query?query=High quality sports news about football",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"news",
+								"query"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "High quality sports news about football"
+								}
+							]
+						},
+						"description": "Example of a relevance score + category query"
+					},
+					"response": []
+				},
+				{
+					"name": "Example 4: Recent User Activity Pattern",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/events/recent?hours=48",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"events",
+								"recent"
+							],
+							"query": [
+								{
+									"key": "hours",
+									"value": "48"
+								}
+							]
+						},
+						"description": "Check recent user activity over the past 48 hours"
+					},
+					"response": []
+				}
+			],
+			"description": "Example scenarios demonstrating common use cases"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
+
