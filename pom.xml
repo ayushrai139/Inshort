@@ -90,6 +90,18 @@
             <artifactId>service</artifactId>
             <version>0.16.1</version>
         </dependency>
+        <!-- Google AI SDK for Gemini -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-aiplatform</artifactId>
+            <version>3.53.0</version>
+        </dependency>
+        <!-- JSON dependency for proper JSON parsing -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
     </dependencies>
 
     <build>

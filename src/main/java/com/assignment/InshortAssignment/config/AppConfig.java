@@ -1,22 +1,25 @@
 package com.assignment.InshortAssignment.config;
 
-import com.theokanning.openai.service.OpenAiService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.time.Duration;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableCaching
 public class AppConfig {
 
-    @Value("${openai.api.key}")
-    private String openaiApiKey;
+    @Value("${gemini.api.key}")
+    private String geminiApiKey;
 
     @Bean
-    public OpenAiService openAiService() {
-        return new OpenAiService(openaiApiKey, Duration.ofSeconds(30));
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @Bean
+    public String geminiApiKey() {
+        return geminiApiKey;
     }
 }

@@ -13,6 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 public class LlmQueryAnalysis {
     private List<String> entities;
-    private String intent;
+    private List<String> intent;
     private String originalQuery;
 }

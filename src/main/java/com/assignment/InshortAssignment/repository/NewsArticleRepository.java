@@ -13,12 +13,12 @@ import java.util.UUID;
 @Repository
 public interface NewsArticleRepository extends JpaRepository<NewsArticle, UUID> {
 
-    // Find by category
-    @Query("SELECT n FROM NewsArticle n JOIN n.category c WHERE c = :category ORDER BY n.publicationDate DESC")
+    // Find by category (case-insensitive)
+    @Query("SELECT n FROM NewsArticle n JOIN n.category c WHERE LOWER(c) = LOWER(:category) ORDER BY n.publicationDate DESC")
     List<NewsArticle> findByCategory(@Param("category") String category, Pageable pageable);
 
-    // Find by source name
-    List<NewsArticle> findBySourceNameOrderByPublicationDateDesc(String sourceName, Pageable pageable);
+    // Find by source name (case-insensitive using JPA method naming)
+    List<NewsArticle> findBySourceNameIgnoreCaseOrderByPublicationDateDesc(String sourceName, Pageable pageable);
 
     // Find by relevance score greater than or equal to a threshold
     List<NewsArticle> findByRelevanceScoreGreaterThanEqualOrderByRelevanceScoreDesc(Double threshold, Pageable pageable);

@@ -50,6 +50,6 @@ public class NewsArticle {
     @Column(nullable = false)
     private Double longitude;
 
-    @Column(name = "llm_summary")
+    @Column(name = "llm_summary", length = 2000)
     private String llmSummary;
 }

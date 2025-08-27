@@ -114,7 +114,8 @@ public class DataLoader implements ApplicationRunner {
 
                     // Parse JSON to list of maps
                     List<Map<String, Object>> articleMaps = objectMapper.readValue(
-                            content, new TypeReference<List<Map<String, Object>>>() {});
+                            content, new TypeReference<>() {
+                            });
 
                     // Process articles in batches
                     processArticlesInBatches(articleMaps);
